@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApi } from '../hooks/useApi';
 
+
 function Home() {
     const { data, isLoading, isError } = useApi(
       'https://v2.api.noroff.dev/online-shop',
@@ -15,12 +16,13 @@ function Home() {
    
     return (
       <div>
+      
       {data.map((product) => (
         <div>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <img src={product.image.url} alt={product.image.alt}/>
-          <button>Add to cart</button>
+          <button>View</button>
         </div>
       ))}
     </div>
