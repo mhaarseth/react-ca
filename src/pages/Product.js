@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useApi } from '../hooks/useApi';
 import { apiUrl } from '../constants/constants';
+import { shallow } from 'zustand/shallow';
 import ProductPrice from '../components/ProductPrice/ProductPrice';
+import { useProductsStore } from '../hooks/useProductsStore';
 
 function Product() {
     let params = useParams();
@@ -9,6 +11,17 @@ function Product() {
     const productUrl = apiUrl + productId;
     const fetchProduct = useApi(productUrl);
     const product = fetchProduct.data;
+
+    const { addToCart } = useProductsStore(
+        (state) => ({
+          cart: state.cart,
+          cartCount: state.cartCount,
+          cartTotal: state.cartTotal,
+          addToCart: state.addToCart,
+          clearCart: state.clearCart,
+        }),
+        shallow,
+      )
     
     return (
         <div>
@@ -28,7 +41,7 @@ function Product() {
     </div>
         
             
-        <button>Add to cart</button>
+        <button onClick={() => addToCart(product)}>Add to cart</button>
         </div>
     )
 }

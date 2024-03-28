@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useProductsStore } from '../../hooks/useProductsStore';
 
 function Nav() {
+    const { cartCount } = useProductsStore(
+      (state) =>
+      ({cartCount: state.cartCount,})
+    )
+
     return (
     <nav>
           <ul>
@@ -11,7 +17,7 @@ function Nav() {
               <Link to='/contact'>Contact</Link>
             </li>
             <li>
-              <Link to='/cart'>Cart - 0</Link>
+              <Link to='/cart'>Cart - {cartCount}</Link>
             </li>
           </ul>
         </nav>
