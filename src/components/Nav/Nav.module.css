@@ -1,0 +1,27 @@
+.nav {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.links {
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.link {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}

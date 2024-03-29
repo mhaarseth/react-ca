@@ -10,7 +10,6 @@ function Layout() {
     return (
       <div>
         <Header />
-        <SearchBar />
         <Outlet />
         <Footer />
       </div>
