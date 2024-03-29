@@ -15,10 +15,12 @@ export default function Cart() {
     return (
       <div>
       <ul>
-        <li>Cart: {cart.map(item => `${item.title} - ${item.price}`).join(', ')}</li>
+      {cart.map((item) => (
+          <li key={item.id}>{item.title} - {item.quantity > 1 ? `${item.quantity} x ` : ''}${item.price.toFixed(2)}</li>
+        ))}
       </ul>
       <div>Total in cart: {cartTotal.toFixed(2)}</div>
       <button onClick={clearCart}>Clear cart</button>
     </div>
     )
-  }
+  };
