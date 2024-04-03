@@ -1,0 +1,43 @@
+.searchBarContainer {
+    position: relative;
+    background: white;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 0 5px;
+    box-shadow: 0 0 8px #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.searchBar {
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+.searchBar:focus {
+    outline: 1px solid;
+    outline-color: black;
+}
+
+.searchResultsContainer {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 8px #ddd;
+    border-radius: 10px;
+    margin-top: 3rem;
+    max-height: 600px;
+    width:100%;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 1000;
+}
+
+.searchResult a {
+    text-decoration: none;
+    font-weight: normal;
+    cursor: pointer;
+}
