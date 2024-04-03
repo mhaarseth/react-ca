@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
-import Contact from  './pages/Contact.js';
+import Contact from  './pages/Contact/index.js';
 import Cart from './components/Cart/Cart.js';
-import Home from './pages/Home.js';
-import RouteNotFound from './pages/RouteNotFound.js';
+import Home from './pages/Home/index.js';
+import RouteNotFound from './pages/RouteNotFound/index.js';
 import Layout from './components/Layout/Layout.js';
-import Product from './pages/Product.js';
-import Checkout from './pages/Checkout.js';
-import CheckoutSuccess from './pages/CheckoutSuccess.js';
+import Product from './pages/Product/index.js';
+import Checkout from './pages/Checkout/index.js';
+import CheckoutSuccess from './pages/CheckoutSuccess/index.js';
 
 function App() {
   return (

@@ -1,0 +1,36 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.inputField {
+    max-width: 400px;
+}
+
+.errorMessage {
+    color: red;
+    height: 25px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.button {
+    width: fit-content;
+    padding: 5px;
+}
+
+.message {
+    height: 200px;
+    max-width: 400px;
+}

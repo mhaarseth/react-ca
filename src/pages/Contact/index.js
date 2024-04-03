@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import styles from './Contact.module.css'
 
 const schema = yup.object({
   fullName: yup
@@ -39,17 +40,24 @@ function Contact() {
 
 
     return (
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register('fullName')} />
-        <p>{errors.fullName?.message}</p>
-        <input {...register('subject')} />
-        <p>{errors.subject?.message}</p>
-        <input {...register('eMail')} />
-        <p>{errors.eMail?.message}</p>
-        <input {...register('body')} />
-        <p>{errors.body?.message}</p>
-        <input type='submit' />
+      <div className={styles.container}>
+      <h1>Contact</h1>
+      <form className={styles.form}onSubmit={handleSubmit(onSubmit)}>
+        <label className={styles.label}>Full name:</label>
+        <input className={styles.inputField} {...register('fullName')} />
+        <p className={styles.errorMessage}>{errors.fullName?.message}</p>
+        <label className={styles.label}>Subject:</label>
+        <input className={styles.inputField} {...register('subject')} />
+        <p className={styles.errorMessage}>{errors.subject?.message}</p>
+        <label className={styles.label}>E-mail address:</label>
+        <input className={styles.inputField} {...register('eMail')} />
+        <p className={styles.errorMessage}>{errors.eMail?.message}</p>
+        <label className={styles.label}>Message:</label>
+        <input className={styles.message} {...register('body')} />
+        <p className={styles.errorMessage}>{errors.body?.message}</p>
+        <input className={styles.button}type='submit' />
       </form>
+      </div>
     )
   }
 

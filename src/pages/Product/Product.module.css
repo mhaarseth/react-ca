@@ -1,0 +1,105 @@
+.productContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productTitleContainer {
+    margin-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.productTitle {
+    margin: 0 10px 30px 10px;;
+    font-size: calc(2rem + 2vw);
+    font-weight: 900;
+}
+
+.descriptionContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.descriptionContainerRightSide {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 580px;
+}
+
+.descriptionContainerLeftSide {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 280px;
+    min-height: 400px;
+    max-width: 580px;
+}
+
+.productDescription {
+    margin-bottom: 30px;
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+.price {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+
+.regularPrice {
+    text-decoration:line-through;
+    font-weight: lighter;
+}
+
+.discountAmount {
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: fit-content;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.userName {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.productReviews {
+    margin-top: 30px;
+}
+
+.productReview {
+    margin-bottom: 30px;
+}
+
+.reviewText {
+    font-style:italic;
+}
+
+.rating {
+   margin-bottom: 10px;
+}

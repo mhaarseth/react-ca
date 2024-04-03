@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useProductsStore } from '../../hooks/useProductsStore';
-import SearchBar from '../SearchBar/SearchBar';
 import styles from './Nav.module.css'
 
 function Nav() {
@@ -19,8 +18,10 @@ function Nav() {
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
-          <SearchBar />
-          <Link to='/cart'>Cart {cartCount}</Link>
+
+          <div className={styles.cartLink}>
+          <Link to='/cart'>Cart</Link> ({cartCount})
+          </div>
         </nav>
     )
   }
