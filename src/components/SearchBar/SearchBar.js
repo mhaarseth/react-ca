@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useApi } from '../../hooks/useApi';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from '../../pages/Home/Home.module.css';
 
 export default function SearchBar() {
     const items = useApi('https://v2.api.noroff.dev/online-shop');
@@ -25,11 +26,12 @@ export default function SearchBar() {
     }, [navigate])
 
     return (
-        <div>
+        <div className={styles.searchBarContainer}>
             <input
+            className={styles.searchBar}
             type='search'
             value={searchInput}
-            placeholder='Start typing to search...'
+            placeholder='Search...'
             onChange={handleChange}
             />
             {searchInput && searchResults.length && searchResults.map((item) => <div key={item.id}><Link to={`/product/${item.id}`}>{item.title}</Link></div>)}

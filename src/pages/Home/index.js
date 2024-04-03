@@ -18,7 +18,7 @@ function Home() {
    
     return (
       <div className={styles.products}>
-        <div className={styles.productsHeading}>
+        <div className={styles.productsHeadingContainer}>
         <h1 className={styles.productsHeading}>Products</h1>
         <SearchBar className={styles.searchBar}/>
         </div>

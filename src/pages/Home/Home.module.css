@@ -19,12 +19,12 @@
     flex: auto;
 }
 
-.productsHeading {
+.productsHeadingContainer {
     display: flex;
     align-items: center;
+    gap: 10px;
     justify-content: space-between;
-    padding: 0 10px;
-    margin-bottom: 30px;
+    margin: 0 0 30px 10px;
 }
 
 .productsHeading {
@@ -36,10 +36,6 @@
 h2 {
     font-size: 1.3rem;
     font-weight: bold;
-}
-
-.searchBar {
-    padding-right: 10px;
 }
 
 .card {
@@ -67,4 +63,26 @@ img {
     padding: 10px;
     color: white;
     margin-top: 20px;
+}
+
+.searchBarContainer {
+    background: white;
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: 0 5px;
+    box-shadow: 0 0 8px #ddd;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.searchBar {
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+.searchBar:focus {
+    outline: 1px solid;
+    outline-color: black;
 }
