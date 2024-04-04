@@ -1,7 +1,9 @@
-function Checkout() {
-    return (
-      <div>List of products in cart and price, plus checkout button</div>
-    )
-  }
+import React from 'react';
+import Cart from '../../components/Cart/Cart';
 
-  export default Checkout;
+
+export default function Checkout() {
+  return (
+    <Cart />
+  )
+  }

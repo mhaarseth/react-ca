@@ -27,10 +27,10 @@ function Nav() {
           </ul>
 
           <div className={styles.cartLink}>
-          <button className={styles.cartLinkButton}onClick={toggleCart}>Cart</button> ({cartCount})
+          <button className={styles.cartLinkButton} onClick={toggleCart}>Cart</button> ({cartCount})
           
           <div>
-          {isCartOpen && <Cart /> }
+          {isCartOpen && <Cart />}
           </div>
           </div>
         </nav>

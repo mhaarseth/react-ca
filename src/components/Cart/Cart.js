@@ -1,5 +1,7 @@
+import React from 'react';
 import { shallow } from 'zustand/shallow';
 import { useProductsStore } from '../../hooks/useProductsStore';
+import { Link } from 'react-router-dom';
 import styles from './Cart.module.css';
 
 export default function Cart() {
@@ -21,7 +23,10 @@ export default function Cart() {
         ))}
       </ul>
       <div className={styles.totalInCart}><span className={styles.totalInCartText}>Total in cart:</span> <span className={styles.totalInCartSum}>{cartTotal.toFixed(2)}kr</span></div>
-      <button onClick={clearCart}>Clear cart</button>
+      <div>
+        <button className={styles.clearCartButton} onClick={clearCart}>Clear cart</button><div className={styles.checkoutLink}><Link to='/checkout'>Checkout</Link></div>
+      </div>
     </div>
     )
+  
   };
