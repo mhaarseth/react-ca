@@ -16,7 +16,6 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/cart' element={<Cart />} />
         <Route path='/product/:id' element={<Product />} />
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/checkoutsuccess' element={<CheckoutSuccess />} />
@@ -28,3 +27,7 @@ function App() {
 }
 
 export default App;
+
+/* Removed to try different solution
+<Route path='/cart' element={<Cart />} />
+*/

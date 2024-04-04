@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useProductsStore } from '../../hooks/useProductsStore';
+import Cart from '../Cart/Cart';
 import styles from './Nav.module.css'
 
 function Nav() {
@@ -7,6 +9,11 @@ function Nav() {
       (state) =>
       ({cartCount: state.cartCount,})
     )
+
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const toggleCart = () => {
+      setIsCartOpen(!isCartOpen)
+    }
 
     return (
     <nav className={styles.nav}>
@@ -20,10 +27,20 @@ function Nav() {
           </ul>
 
           <div className={styles.cartLink}>
-          <Link to='/cart'>Cart</Link> ({cartCount})
+          <button className={styles.cartLinkButton}onClick={toggleCart}>Cart</button> ({cartCount})
+          
+          <div>
+          {isCartOpen && <Cart /> }
+          </div>
           </div>
         </nav>
     )
   }
 
   export default Nav;
+
+
+
+/* Removed to try different solution
+  <Link to='/cart'>Cart</Link> ({cartCount})
+  */

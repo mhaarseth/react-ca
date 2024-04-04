@@ -34,4 +34,16 @@ a:hover {
 
 .cartLink {
     margin: 10px;
+    position: relative;
+}
+
+.cartLinkButton {
+    background-color: transparent;
+    border: none;
+    font-size: calc(22px + 0.5vw);
+    font-weight: bold;
+}
+
+.cartLinkButton:hover {
+    text-decoration: underline;
 }

@@ -1,5 +1,6 @@
 import { shallow } from 'zustand/shallow';
 import { useProductsStore } from '../../hooks/useProductsStore';
+import styles from './Cart.module.css';
 
 export default function Cart() {
   const { cart, cartTotal, clearCart } = useProductsStore(
@@ -13,13 +14,13 @@ export default function Cart() {
   )
 
     return (
-      <div>
-      <ul>
+      <div className={styles.cart}>
+      <ul className={styles.cartItems}>
       {cart.map((item) => (
-          <li key={item.id}>{item.title} - {item.quantity > 1 ? `${item.quantity} x ` : ''}${item.price.toFixed(2)}</li>
+          <li className={styles.cartItem} key={item.id}><span className={styles.cartItemName}>{item.title}</span><span className={styles.cartItemPrice}>{item.quantity > 1 ? `${item.quantity} x ` : ''}{item.price.toFixed(2)}kr</span></li>
         ))}
       </ul>
-      <div>Total in cart: {cartTotal.toFixed(2)}</div>
+      <div className={styles.totalInCart}><span className={styles.totalInCartText}>Total in cart:</span> <span className={styles.totalInCartSum}>{cartTotal.toFixed(2)}kr</span></div>
       <button onClick={clearCart}>Clear cart</button>
     </div>
     )
