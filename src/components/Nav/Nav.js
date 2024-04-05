@@ -21,7 +21,7 @@ function Nav() {
             <li className={styles.link}>
               <Link to='/'>Home</Link>
             </li>
-            <li>
+            <li className={styles.link}>
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
@@ -38,9 +38,3 @@ function Nav() {
   }
 
   export default Nav;
-
-
-
-/* Removed to try different solution
-  <Link to='/cart'>Cart</Link> ({cartCount})
-  */

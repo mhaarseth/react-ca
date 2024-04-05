@@ -18,6 +18,7 @@
     padding: 0;
     font-size: 1rem;
     margin: 0;
+    border-bottom: 2px solid black;
 }
 
 .cartItem {
@@ -29,7 +30,6 @@
 .totalInCart {
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid black;
     padding-top: 5px;
 }
 

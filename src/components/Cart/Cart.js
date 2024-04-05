@@ -17,6 +17,7 @@ export default function Cart() {
 
     return (
       <div className={styles.cart}>
+        
       <ul className={styles.cartItems}>
       {cart.map((item) => (
           <li className={styles.cartItem} key={item.id}><span className={styles.cartItemName}>{item.title}</span><span className={styles.cartItemPrice}>{item.quantity > 1 ? `${item.quantity} x ` : ''}{item.price.toFixed(2)}kr</span></li>
