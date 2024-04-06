@@ -1,7 +1,12 @@
 .container {
+    min-width: 600px;
     max-width: 900px;
     margin: 0 auto;
     padding: 10px;
+}
+
+.contactTitle {
+    font-size: calc(2rem + 2vw);
 }
 
 .form {

@@ -16,6 +16,7 @@ const schema = yup.object({
   eMail: yup
     .string()
     .matches(
+      // eslint-disable-next-line
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
        'Please enter a valid e-mail address')
     .required('An e-mail address is required'),
@@ -41,7 +42,7 @@ function Contact() {
 
     return (
       <div className={styles.container}>
-      <h1>Contact</h1>
+      <h1 className={styles.contactTitle}>Contact</h1>
       <form className={styles.form}onSubmit={handleSubmit(onSubmit)}>
         <label className={styles.label}>Full name:</label>
         <input className={styles.inputField} {...register('fullName')} />
