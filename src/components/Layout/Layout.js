@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import styles from './Layout.module.css';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import SearchBar from '../SearchBar/SearchBar';
@@ -6,12 +7,12 @@ import SearchBar from '../SearchBar/SearchBar';
 function Layout() {
 
     return (
-      <div>
+      <div className={styles.layoutContainer}>
         <Header />
-        <Outlet />
+        <Outlet className={styles.outlet}/>
         <Footer />
       </div>
-    )
-  }
+      )
+    }
 
   export default Layout;
