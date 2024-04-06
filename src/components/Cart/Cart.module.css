@@ -40,3 +40,31 @@
 .totalInCartSum {
     font-size: 1rem;
 }
+
+.cartButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.clearCartButton {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.checkoutButton {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.checkoutButton a {
+    color: white;
+    text-decoration: none;
+}

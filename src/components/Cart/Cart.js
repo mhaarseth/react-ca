@@ -24,8 +24,8 @@ export default function Cart() {
         ))}
       </ul>
       <div className={styles.totalInCart}><span className={styles.totalInCartText}>Total in cart:</span> <span className={styles.totalInCartSum}>{cartTotal.toFixed(2)}kr</span></div>
-      <div>
-        <button className={styles.clearCartButton} onClick={clearCart}>Clear cart</button><div className={styles.checkoutLink}><Link to='/checkout'>Checkout</Link></div>
+      <div className={styles.cartButtonsContainer}>
+        <button className={styles.clearCartButton} onClick={clearCart}>Clear cart</button><button className={styles.checkoutButton}><Link to='/checkout'>Go to checkout</Link></button>
       </div>
     </div>
     )
