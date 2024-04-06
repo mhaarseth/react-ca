@@ -5,8 +5,12 @@
     justify-content: space-between;
     height: 100px;
     max-width: 1200px;
-    margin: 0 auto;
+    background-color: white;
     font-size: calc(22px + 0.5vw);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
 }
 
 .links {
