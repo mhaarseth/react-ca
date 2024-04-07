@@ -29,8 +29,16 @@
 }
 
 .button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
     width: fit-content;
-    padding: 5px;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .message {
