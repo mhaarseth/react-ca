@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useProductsStore } from '../../hooks/useProductsStore';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -16,6 +16,19 @@ function Nav() {
       setIsCartOpen(!isCartOpen)
     }
 
+    const cartRef = useRef()
+    useEffect(() => {
+      function handleClick(event) {
+        if(!cartRef.current?.contains(event.target)) {
+            setIsCartOpen(false);
+      }
+      }
+      window.addEventListener('click', handleClick)
+      return () => window.removeEventListener('click', handleClick);
+    })
+
+
+
     return (
     <nav className={styles.nav}>
           <ul className={styles.links}>
@@ -27,7 +40,7 @@ function Nav() {
             </li>
           </ul>
 
-          <div className={styles.cartLink}>
+          <div className={styles.cartLink} ref={cartRef}>
           <button className={styles.cartLinkButton} onClick={toggleCart}><FaShoppingCart /></button> ({cartCount})
           
           <div>

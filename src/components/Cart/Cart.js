@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { shallow } from 'zustand/shallow';
 import { useProductsStore } from '../../hooks/useProductsStore';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,7 @@ export default function Cart() {
     }),
     shallow,
   )
+
 
     return (
       <div className={styles.cart}>
