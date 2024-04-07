@@ -15,6 +15,9 @@ export default function Checkout() {
     }),
     shallow,
   )
+
+  const isCartEmpty = cart.length === 0;
+
   return (
         <div className={styles.checkout}>
           <h1 className={styles.checkoutTitle}>Review your order</h1>
@@ -29,8 +32,12 @@ export default function Checkout() {
           <span className={styles.totalInCheckoutSum}>{cartTotal.toFixed(2)}kr</span>
         </div>
         <div className={styles.checkoutButtonsContainer}>
+        {!isCartEmpty && (
+          <>
           <button className={styles.clearCheckoutButton} onClick={clearCart}>Clear cart</button>
           <button className={styles.checkoutDoneButton} onClick={clearCart}><Link to='/checkoutsuccess'>Checkout</Link></button>
+          </>
+          )}
         </div>
         </div>
       </div>
