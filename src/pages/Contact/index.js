@@ -54,7 +54,7 @@ function Contact() {
         <input className={styles.inputField} {...register('eMail')} />
         <p className={styles.errorMessage}>{errors.eMail?.message}</p>
         <label className={styles.label}>Message:</label>
-        <input className={styles.message} {...register('body')} />
+        <textarea className={styles.message} {...register('body')} />
         <p className={styles.errorMessage}>{errors.body?.message}</p>
         <input className={styles.button}type='submit' />
       </form>
