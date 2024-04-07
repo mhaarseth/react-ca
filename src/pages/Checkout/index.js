@@ -18,6 +18,7 @@ export default function Checkout() {
   return (
         <div className={styles.checkout}>
           <h1 className={styles.checkoutTitle}>Review your order</h1>
+        <div className={styles.checkoutItemsContainer}>
         <ul className={styles.checkoutItems}>
         {cart.map((item) => (
             <li className={styles.checkoutItem} key={item.id}><span className={styles.checkoutItemName}>{item.title}</span><span className={styles.checkoutItemPrice}>{item.quantity > 1 ? `${item.quantity} x ` : ''}{item.price.toFixed(2)}kr</span></li>
@@ -30,6 +31,7 @@ export default function Checkout() {
         <div className={styles.checkoutButtonsContainer}>
           <button className={styles.clearCheckoutButton} onClick={clearCart}>Clear cart</button>
           <button className={styles.checkoutDoneButton} onClick={clearCart}><Link to='/checkoutsuccess'>Checkout</Link></button>
+        </div>
         </div>
       </div>
   )

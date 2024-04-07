@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useProductsStore } from '../../hooks/useProductsStore';
+import { FaShoppingCart } from 'react-icons/fa';
 import Cart from '../Cart/Cart';
 import styles from './Nav.module.css'
 
@@ -27,7 +28,7 @@ function Nav() {
           </ul>
 
           <div className={styles.cartLink}>
-          <button className={styles.cartLinkButton} onClick={toggleCart}>Cart</button> ({cartCount})
+          <button className={styles.cartLinkButton} onClick={toggleCart}><FaShoppingCart /></button> ({cartCount})
           
           <div>
           {isCartOpen && <Cart />}
