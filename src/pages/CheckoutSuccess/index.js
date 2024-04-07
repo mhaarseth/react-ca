@@ -1,6 +1,8 @@
+import styles from './checkoutSuccess.module.css';
+
 function CheckoutSuccess() {
     return (
-      <div>Thanks for shopping!</div>
+      <div className={styles.checkoutSuccessContainer}>Thanks for shopping!</div>
     )
   }
 
