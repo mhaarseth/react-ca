@@ -41,6 +41,10 @@
     position: relative;
 }
 
+.cartLinkButton:hover {
+    cursor: pointer;
+}
+
 .cartLinkButton {
     background-color: transparent;
     border: none;

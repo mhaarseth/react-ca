@@ -17,7 +17,7 @@ export default function Checkout() {
   )
   return (
         <div className={styles.checkout}>
-          <h1>Review your order</h1>
+          <h1 className={styles.checkoutTitle}>Review your order</h1>
         <ul className={styles.checkoutItems}>
         {cart.map((item) => (
             <li className={styles.checkoutItem} key={item.id}><span className={styles.checkoutItemName}>{item.title}</span><span className={styles.checkoutItemPrice}>{item.quantity > 1 ? `${item.quantity} x ` : ''}{item.price.toFixed(2)}kr</span></li>

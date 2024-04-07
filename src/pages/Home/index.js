@@ -31,7 +31,7 @@ function Home() {
               </div>
               <Link to={`/product/${product.id}`} className={styles.button}>View product</Link>
             </div>
-      ))}
+            ))}
       </div>
     </div>
     )

@@ -1,9 +1,9 @@
 .layoutContainer {
-    min-height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
-    max-width: 1200px;
+    grid-template-rows: auto 1fr auto;
     margin: 0 auto;
+    max-width: 1200px;
+    min-height: 100vh;
 }
 
